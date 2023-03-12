@@ -58,7 +58,7 @@ public class View {
             System.out.print(prompt); _ok = true;
             r = Integer.valueOf(input.nextLine());
         } catch (Exception e) {
-            _ok = !require; prompt= "not valid integer>";
+            _ok = !require; prompt= "not valid! Try again>";
             r = defaultValue;
         }
         } while (!_ok);
@@ -76,7 +76,7 @@ public class View {
                 System.out.print(prompt); _ok = true;
                 r = Double.valueOf(input.nextDouble());
             } catch (Exception e) {
-                _ok = !require; prompt= "not valid double>";
+                _ok = !require; prompt= "not valid! Try again>";
                 r = defaultValue;
             }
         } while (!_ok);
@@ -95,7 +95,7 @@ public class View {
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); //yyyy-MM-dd
             r = sdf.parse(input.nextLine());
         } catch (Exception e) {
-            _ok = !require; prompt= "not valid date >";
+            _ok = !require; prompt= "not valid! Try again>";
             r = defaultValue;
         }
         } while (!_ok);
