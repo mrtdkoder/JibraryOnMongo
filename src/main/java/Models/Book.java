@@ -13,7 +13,7 @@ public class Book {
     public int stockAmount;
     public boolean isSold;
     public double price;
-    public Date releaseDate;
+    //public Date releaseDate;
 
     public Book() {
 
@@ -30,7 +30,7 @@ public class Book {
         this.stockAmount = stockAmount;
         this.isSold = isSold;
         this.price = price;
-        this.releaseDate = releaseDate;
+        //this.releaseDate = releaseDate;
     }
 
     @Override
@@ -46,7 +46,7 @@ public class Book {
                 ", stockAmount=" + stockAmount +
                 ", isSold=" + isSold +
                 ", price=" + price +
-                ", releaseDate=" + releaseDate +
+                //", releaseDate=" + releaseDate +
                 '}';
     }
 }
