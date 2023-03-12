@@ -1,5 +1,7 @@
 import Models.Book;
 import Models.BookRepostory;
+import Views.LoginScreen;
+import Views.View;
 
 import java.util.Date;
 import java.util.Scanner;
@@ -9,12 +11,22 @@ public class main {
     public static BookRepostory br = new BookRepostory(true);
     public static void main(String[] args) {
 
+        View v = new View();
+        v.title = "Book List";
+        v.titleBar("",0);
 
+        for (int i = 0; i < 3 ; i++) {
+            System.out.println(v.readInt(i + "sayi giriniz: ",0,true));
+        }
+        System.out.println(v.readDate("Dob:"));
+        v.buttomBar();
 
-        loginScreen();
+        LoginScreen ls = new LoginScreen();
+        ls.showMenu();
+        /*loginScreen();
         showBookList();
         showDeleteBookScreen();
-        showBookList();
+        showBookList();*/
 
     }
 

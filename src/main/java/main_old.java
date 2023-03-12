@@ -1,30 +1,30 @@
 import DAO.MongoDBClient;
-import Models.Person;
-import Models.PersonRepostory;
+import Models.Member;
+import Models.MemberRepostory;
 
 import java.util.Date;
 
 public class main_old {
     public static void main(String[] args) {
         MongoDBClient mongo = new MongoDBClient();
-        PersonRepostory people = new PersonRepostory(true);
-        people.add(new Person(0,"Murat nc",
+        MemberRepostory people = new MemberRepostory(true);
+        /*people.add(new Member(0,"Murat nc",
                                 "mmx@mmx.com",
                                 "07788996655",
                                 "22 somewhere",
                                 new Date()));
-        people.add(new Person(0,"suat nc",
+        people.add(new Member(0,"suat nc",
                 "ssx@mmx.com",
                 "07788996655",
                 "22 somewhere",
                 new Date()));
-        people.add(new Person(0,"fuat nc",
+        people.add(new Member(0,"fuat nc",
                 "ffx@mmx.com",
                 "07788996655",
                 "22 somewhere",
                 new Date()));
 
-        System.out.printf("%s", new Date());
+        System.out.printf("%s", new Date());*/
         /*String dateString = "2022-12-31";
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         try {
