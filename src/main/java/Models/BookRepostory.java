@@ -66,7 +66,17 @@ public class BookRepostory {
         return _list;
     }
     public List<Book> searchAllToList(String search) {
-        return _list.stream().filter(b -> b.toString().toLowerCase().contains(search.toLowerCase())).toList();
+        //return _list.stream().filter(b -> b.toString().toLowerCase().contains(search.toLowerCase())).toList();
+        List<Book> result = new ArrayList<>();
+        for (Book b : _list) {
+            if (b.title.contains(search)) {
+                result.add(b);
+            }
+            }
+        return result;
+        }
+
+
     }
 
-}
+

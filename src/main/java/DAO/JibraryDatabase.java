@@ -1,7 +1,7 @@
 package DAO;
 
 import Models.Book;
-import Models.Person;
+import Models.Member;
 
 import java.util.List;
 
@@ -10,27 +10,27 @@ public class JibraryDatabase {
 
 
     /***************************************
-     *      Person Class methods
+     *      Member Class methods
      ****************************************/
-    public List<Person> loadPersonList() {
-        return mongo.loadList("Person", Person.class);
+    public List<Member> loadPersonList() {
+        return mongo.loadList("Member", Member.class);
     }
 
-    public void addPerson(Person person) {
-        if (person!= null) {
-            mongo.insert(person, Person.class, "Person");
+    public void addMember(Member member) {
+        if (member != null) {
+            mongo.insert(member, Member.class, "Member");
         }
     }
 
-    public void updatePerson(Person person) {
-        if (person!= null) {
-            mongo.update(person, Person.class, "Person", "personId", person.personId);
+    public void updateMember(Member member) {
+        if (member != null) {
+            mongo.update(member, Member.class, "Member", "memberId", member.memberId);
         }
     }
 
-    public void deletePerson(Person person) {
-        if (person!= null) {
-            mongo.delete(person, Person.class, "Person", "personId", person.personId);
+    public void deleteMember(Member member) {
+        if (member != null) {
+            mongo.delete(member, Member.class, "Member", "memberId", member.memberId);
         }
     }
 
