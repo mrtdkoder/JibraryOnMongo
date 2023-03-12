@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class MemberRepostory {
-    private List<Member> _list = new ArrayList<Member>();
+    private List<Member> _list = new ArrayList<>();
     private JibraryDatabase remote_database=null;
 
 
@@ -17,7 +17,7 @@ public class MemberRepostory {
     public MemberRepostory(boolean isRemote) {
         if (isRemote) {
             remote_database = new JibraryDatabase();
-            _list = remote_database.loadPersonList();
+            _list = remote_database.loadMemberList();
         }
     }
 
@@ -38,7 +38,7 @@ public class MemberRepostory {
 
     public void syncRemote() {
         if (isRemote()) {
-            _list = remote_database.loadPersonList();
+            _list = remote_database.loadMemberList();
         }
     }
 

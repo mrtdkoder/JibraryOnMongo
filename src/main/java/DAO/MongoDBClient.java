@@ -42,7 +42,7 @@ public class MongoDBClient {
 
     public <T> List<T> loadList(String collectionName, Class<T> aClass) {
         MongoCollection<T> collection = database.getCollection(collectionName, aClass);
-        List<T> documents = new ArrayList<T>();
+        List<T> documents = new ArrayList<>();
 
         MongoCursor<T> cursor = collection.find().iterator();
         try {

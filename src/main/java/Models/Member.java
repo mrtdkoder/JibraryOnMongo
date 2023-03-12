@@ -3,7 +3,7 @@ package Models;
 
 import java.util.Date;
 
-public final class Member {
+public class Member {
    // public String _id ;
     public int memberId;
     public String fullName;
@@ -18,6 +18,9 @@ public final class Member {
     public int status; // 0 = inactive, 1 = active, -1=banned
     public String getDoB() {
         return DoB.toString();
+    }
+    public void setDoB(Date DoB) {
+        this.DoB = DoB;
     }
 
     public Member(){
@@ -48,12 +51,12 @@ public final class Member {
     @Override
     public String toString() {
         return "Person{" +
-                "personId=" + memberId +
-                " fullName='" + fullName + "\'" +
-                ", email='" + email + "' " +
-                ", phone='" + phone + "'" +
-                ", address='" + address + "'"+
-                ", DoB=" + DoB +
+                "personId:" + memberId +
+                " fullName:'" + fullName + "\'" +
+                ", email:'" + email + "' " +
+                ", phone:'" + phone + "'" +
+                ", address:'" + address + "'"+
+                ", DoB:" + DoB +
                 "}";
     }
 }
